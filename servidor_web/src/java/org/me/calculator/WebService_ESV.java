@@ -18,11 +18,19 @@ import javax.ejb.Stateless;
 @Stateless()
 public class WebService_ESV {
 
+
     /**
-     * This is a sample web service operation
+     * Web service operation
+     * @param rx
+     * @param tx
+     * @return 
      */
-    @WebMethod(operationName = "hello")
-    public String hello(@WebParam(name = "name") String txt) {
-        return "Hello " + txt + " !";
+    @WebMethod(operationName = "operation")
+    public int operation(@WebParam(name = "rx") int rx, @WebParam(name = "tx") int tx) {
+        //TODO write your implementation code here:
+         int k = rx + tx;
+        return k;
     }
+    
+    
 }
